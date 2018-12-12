@@ -1,0 +1,19 @@
+<ion-header>
+<ion-navbar>
+  <ion-title>Your Garden</ion-title>
+   <ion-buttons left>
+      <button [menuToggle]="sidemenu">
+      <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+</ion-navbar>
+</ion-header>
+
+<ion-content class="home" *ngIf="auth.authenticated()">
+    <ion-row *ngFor="let tile of homeTiles" class="button-container {{tile.background}}">
+        <button full large class="button" (click)="openPage(tile)"> <!--[navPush]="tile.component"-->
+            <ion-icon name="{{tile.icon}}"></ion-icon>
+            {{tile.title}}
+        </button>
+    </ion-row>
+</ion-content>

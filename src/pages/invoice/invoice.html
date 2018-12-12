@@ -1,0 +1,38 @@
+<ion-header>
+<ion-navbar>
+    <ion-title>Invoices</ion-title>
+    <ion-buttons left>
+      <button [menuToggle]="sidemenu">
+      <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+</ion-navbar>
+<ion-searchbar debounce="300" placeholder="Search..." (ionInput)="getItems($event)"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+    <ion-fab right bottom>
+        <button ion-fab mini (click)="addInvoice()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+    <ion-list class="invoice__list">
+        <ion-card *ngFor="let invoice of filteredInvoices| async" (click)="viewInvoiceOptions(invoice,invoice.$key)">
+          <ion-item>
+              <ion-row>
+                  <ion-col col-3>
+                      <ion-avatar item-left>
+                        <img src="assets/images/placeholder_invoice.jpg">
+                      </ion-avatar>
+                  </ion-col>
+                  <ion-col col-9>
+                        <h2>{{invoice.invoiceID}}</h2>
+                        <p>Date: {{ invoice.date }}</p>
+                        <p>User: {{ invoice.user.name }}</p>
+                        <p>{{ invoice.additional_information }}</p>
+                  </ion-col>
+              </ion-row>
+          </ion-item>
+        </ion-card>
+    </ion-list>
+</ion-content>

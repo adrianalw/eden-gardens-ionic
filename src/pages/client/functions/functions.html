@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <span ion-text color="primary" showWhen="ios">Cancel</span>
+                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>{{ this.title }} Client</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" required [(ngModel)]="client.name" name="name" ngControl="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Address</ion-label>
+            <ion-textarea [(ngModel)]="client.address" name="address" ngControl="address"></ion-textarea>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="text" required [(ngModel)]="client.email" name="email" ngControl="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Mobile</ion-label>
+            <ion-input type="text" required [(ngModel)]="client.mobile" name="mobile" ngControl="mobile"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Phone</ion-label>
+            <ion-input type="text" [(ngModel)]="client.phone" name="phone" ngControl="phone"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-row>
+        <ion-col>
+            <button ion-button colour="secondary" type="submit" block *ngIf="!key" (click)="addClientItem()" >Add Client</button>
+            <button ion-button colour="secondary" type="submit" block *ngIf="key" (click)="saveClientItem(client)" >Save Client</button>
+        </ion-col>
+    </ion-row>
+</ion-content>

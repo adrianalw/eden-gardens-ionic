@@ -1,0 +1,27 @@
+page-invoice-functions {
+    form{
+        height: 100%;
+    }
+    .swiper-slide{
+        padding-bottom: 3.5rem;
+        .slide-zoom{
+            height: 100%;
+            overflow-y: scroll;
+            ion-card{
+                &.active{
+                    -webkit-box-shadow: 0px 0px 15px -1px rgba(0,105,92,1);
+                    -moz-box-shadow: 0px 0px 15px -1px rgba(0,105,92,1);
+                    box-shadow: 0px 0px 15px -1px rgba(0,105,92,1);
+                }
+            }
+            ion-buttons{
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+                button{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

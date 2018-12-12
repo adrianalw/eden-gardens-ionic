@@ -1,0 +1,43 @@
+.home {
+    .button-container{
+        height: 23vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        display: block;
+        button{
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100%;
+            background-color: rgba(17,75,95,0.7);
+            box-shadow: none;
+            margin: 0;
+            padding: 0;
+            border: 0 !important;
+            color: $white;
+            font-size: 2rem;
+        }
+        ion-icon{
+            position: relative;
+            top: 4px;
+            font-size: 3rem;
+            color: $white;
+        }
+        &.client-background{
+            background-image: url('../assets/images/client-background.jpg');
+        }
+        &.invoice-background{
+            background-image: url('../assets/images/invoice-background.jpg');
+        }
+        &.produce-background{
+            background-image: url('../assets/images/produce-background.jpg');
+        }
+        &.reports-background{
+            background-image: url('../assets/images/reports-background.jpg');
+        }
+    }
+}

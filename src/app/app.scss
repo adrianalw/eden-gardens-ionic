@@ -1,0 +1,203 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+/****** TOP EXCLUSIVE SETTINGS *******/
+$black: #000;
+$white: #fff;
+$light-black: #2d2d2d;
+
+$facebook-blue: #3a5795;
+$twitter-blue: #55acee;
+
+$lightest-teal: #26A69A;
+$lighter-teal: #009688;
+$light-teal: #00897B;
+$teal: #00796B;
+$dark-teal: #00695C;
+$darkest-teal: #004D40;
+
+$primary-color: $teal;
+$secondary-color: $dark-teal;
+
+/*** Font Properties **/
+$body-font-family: 'Open Sans', "Arial", "Verdana", sans-serif;
+
+$base-font-size: 10px;
+
+$bold-font-weight: 700;
+$medium-font-weight: 400;
+$light-font-weight: 100;
+
+
+@import "../pages/about/about";
+@import "../pages/contact/contact";
+@import "../pages/home/home.scss";
+@import "../pages/terms-of-service/terms-of-service";
+@import "../pages/produce/produce";
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $white;
+}
+
+html{
+    font-size: $base-font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+li,
+span,
+input,
+select,
+textarea{
+    font-family: $body-font-family;
+}
+input,
+select,
+textarea{
+    font-size: 1.4rem;
+}
+p,li,span{
+    text-overflow: ellipsis !important;
+    overflow: auto !important;
+}
+h1{
+    font-size: 2.2rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h4{
+    font-size: 1.6rem;
+}
+p,li,a{
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.vines{
+    background-image: url('../assets/images/vines.png');
+    height: 100vh;
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+.auth0-lock-close-button{
+    display: none !important;
+}
+ion-header{
+    .toolbar-background{
+        background-color: $dark-teal;
+    }
+    ion-navbar{
+        .toolbar-title{
+            color: $white;
+        }
+        ion-buttons{
+            button{
+                background-color: transparent !important;
+                font-size:2.4rem !important;
+                color: $white !important;
+                .text{
+                    font-size: 1.5rem;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+ion-menu{
+    ion-header{
+        .toolbar-title{
+            color: $white;
+            text-align: center;
+        }
+    }
+    ion-content{
+        .scroll-content, .fixed-content{
+            background-color: $light-teal;
+        }
+        margin-top: 0;
+        ion-list{
+            padding: 20px 0;
+            .item{
+                background-color: $light-teal;
+                text-align: center;
+                padding: 5px 0;
+                border: 0 !important;
+                .item-inner{
+                    background-image: none !important;
+                    padding: 0 0 0 10px !important;
+                    border: 0 !important;
+                    ion-label{
+                        color: $white;
+                        ion-icon{
+                            font-size: 2rem;
+                            position: relative;
+                            top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ion-searchbar{
+    .searchbar-input-container{
+        .searchbar-input{
+        }
+    }
+}
+.ion-page{
+    ion-content{
+        .fixed-content, .scroll-content{
+            margin-top: 55px;
+        }
+        ion-item{
+            h2{
+            }
+            p{
+            }
+            ion-card-content{
+                p{
+                }
+            }
+            button{
+                margin: 0;
+            }
+        }
+    }
+}

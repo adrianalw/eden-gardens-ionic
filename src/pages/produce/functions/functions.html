@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <span ion-text color="primary" showWhen="ios">Cancel</span>
+                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>{{ this.title }} Produce</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" required [(ngModel)]="item.name" name="name" ngControl="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Description</ion-label>
+            <ion-textarea [(ngModel)]="item.description" name="description" ngControl="description"></ion-textarea>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Category</ion-label>
+            <ion-input type="text" required [(ngModel)]="item.category" name="category" ngControl="category"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Availability</ion-label>
+            <ion-input type="text" required [(ngModel)]="item.availability" name="availability" ngControl="availability"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Finish</ion-label>
+            <ion-input type="text" required [(ngModel)]="item.finish" name="finish" ngControl="finish"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Unit</ion-label>
+            <ion-input type="text" [(ngModel)]="item.unit" name="unit" ngControl="unit"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-row>
+        <ion-col>
+            <button ion-button colour="secondary" type="submit" block *ngIf="!key" (click)="addProduceItem()" >Add Produce</button>
+            <button ion-button colour="secondary" type="submit" block *ngIf="key" (click)="saveProduceItem(form)" >Save Produce</button>
+        </ion-col>
+    </ion-row>
+</ion-content>

@@ -1,0 +1,98 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+            <span ion-text color="primary" showWhen="ios">Cancel</span>
+            <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>{{ this.invoice.date }}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <pdf-viewer [src]="pdfUrl" [page]="page" [original-size]="false" style="display: block;">
+
+    </pdf-viewer>
+
+    <button ion-button block color="secondary" *ngIf="this.invoice.paymentStatus == true" style="    background-color: rgb(92, 202, 10);    margin-top: 0px;">Invoice has been paid</button>
+
+    <ion-card>
+        <ion-item>
+            <ion-row align-items-center>
+                <ion-col col-3>
+                    <ion-avatar item-left>
+                        <img src="assets/images/placeholder-photo.png">
+                    </ion-avatar>
+                </ion-col>
+                <ion-col col-9 align-self-center>
+                    <h2>{{ this.invoice.user.name }}</h2>
+                    <p>{{ this.invoice.user.email }}</p>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-card>
+    <ion-list>
+        <ion-item item-right>
+            Date
+            <ion-note item-right>
+                {{ this.invoice.date }}
+            </ion-note>
+        </ion-item>
+    </ion-list>
+    <ion-list inset *ngIf="this.invoice.produce?.length">
+        <ion-item *ngFor="let produceItem of this.invoice.produce">
+            <ion-row align-items-center>
+                <ion-col col-3>
+                    <ion-avatar item-left>
+                        <img src="../assets/images/produce_placeholder.png">
+                    </ion-avatar>
+                </ion-col>
+                <ion-col col-9>
+                    <h2>{{ produceItem.name }}</h2>
+                    <p>Price: {{ produceItem?.price | number : '1.2-2' }}</p>
+                    <p>QTY: {{ produceItem?.qty }}</p>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-item item-right>
+            SubTotal
+            <ion-note item-right>
+                {{getSubTotal() | number : '1.2-2' }}
+            </ion-note>
+        </ion-item>
+        <ion-item item-right>
+            Tax: {{ this.tax }}%
+            <ion-note item-right>
+                {{getTax() | number : '1.2-2' }}
+            </ion-note>
+        </ion-item>
+        <ion-item item-right>
+            Grand-Total
+            <ion-note item-right>
+                {{getGrandTotal() | number : '1.2-2' }}
+            </ion-note>
+        </ion-item>
+    </ion-list>
+    <ion-row>
+        <ion-col>
+            <h4>Additional Information</h4>
+            <p>{{ this.invoice.additional_information }}</p>
+        </ion-col>
+    </ion-row>
+</ion-content>
+
+<ion-footer *ngIf="this.invoice.paymentStatus == false" style="background: rgba(91, 201, 46, 0.93) !important;">
+    <ion-toolbar style="background: rgba(91, 201, 46, 0.93) !important;">
+        <ion-title (click)="openCheckout()">CHECK OUT {{getGrandTotal() | number : '1.2-2' }}</ion-title>
+    </ion-toolbar>
+</ion-footer>
+
+<ion-footer *ngIf="this.invoice.paymentStatus == true" style="background: rgba(91, 201, 46, 0.93) !important;">
+    <ion-toolbar style="background: rgba(91, 201, 46, 0.93) !important;">
+        <ion-title (click)="generatePDF()">Genetate PDF</ion-title>
+    </ion-toolbar>
+</ion-footer>

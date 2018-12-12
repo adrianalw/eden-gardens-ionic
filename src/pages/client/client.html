@@ -1,0 +1,37 @@
+<ion-header>
+<ion-navbar>
+  <ion-title>Clients</ion-title>
+   <ion-buttons left>
+      <button [menuToggle]="sidemenu">
+      <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+</ion-navbar>
+<ion-searchbar debounce="300" placeholder="Search..." (ionInput)="getItems($event)"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+    <ion-fab right bottom>
+        <button ion-fab mini (click)="addClient()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+    <ion-list class="client__list">
+        <ion-card *ngFor="let client of filteredClients| async" (click)="viewClientOptions(client)">
+          <ion-item>
+              <ion-row align-items-center>
+                  <ion-col col-3>
+                      <ion-avatar item-left>
+                        <img src="assets/images/placeholder-photo.png">
+                      </ion-avatar>
+                  </ion-col>
+                  <ion-col col-9 align-self-center>
+                        <h2 text-capitalize>{{ client.name }}</h2>
+                  </ion-col>
+              </ion-row>
+          </ion-item>
+
+        </ion-card>
+    </ion-list>
+
+</ion-content>

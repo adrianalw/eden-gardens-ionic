@@ -1,0 +1,433 @@
+{
+  "company" : [ {
+    "address" : "123 Test Ave Test Suburb 1234 Test State Test Country",
+    "company_name" : "Test1",
+    "company_type" : "",
+    "email" : "test@test.com",
+    "id" : 1,
+    "invoice" : [ {
+      "company_name" : "Test",
+      "id" : 1
+    } ],
+    "is_active" : 1,
+    "logo" : "",
+    "phone" : "012345678",
+    "produce" : [ {
+      "category" : "vegetable",
+      "description" : "artichokes globe",
+      "id" : "artgk"
+    } ],
+    "user" : [ {
+      "id" : 1,
+      "name" : "Test1"
+    }, {
+      "id" : 2,
+      "name" : "Test2"
+    } ]
+  }, {
+    "address" : "123 Test Ave Test Suburb 1234 Test State Test Country",
+    "company_name" : "Test2",
+    "company_type" : "",
+    "email" : "test@test.com",
+    "id" : 2,
+    "invoice" : [ {
+      "company_name" : "Test",
+      "id" : 1
+    } ],
+    "is_active" : 1,
+    "logo" : "",
+    "phone" : "012345678",
+    "produce" : [ {
+      "category" : "vegetable",
+      "description" : "artichokes globe",
+      "id" : "artgk"
+    } ],
+    "user" : [ {
+      "id" : 3,
+      "name" : "Test3"
+    }, {
+      "id" : 4,
+      "name" : "Test4"
+    } ]
+  }, {
+    "address" : "123 Test Ave Test Suburb 1234 Test State Test Country",
+    "company_name" : "Test3",
+    "company_type" : "",
+    "email" : "test@test.com",
+    "id" : 3,
+    "invoice" : [ {
+      "company_name" : "Test",
+      "id" : 1
+    } ],
+    "is_active" : 1,
+    "logo" : "",
+    "phone" : "012345678",
+    "produce" : [ {
+      "category" : "vegetable",
+      "description" : "artichokes globe",
+      "id" : "artgk"
+    } ],
+    "user" : [ {
+      "id" : 5,
+      "name" : "Test5"
+    } ]
+  } ],
+  "invoice" : [ {
+    "additional_information" : "",
+    "company" : {
+      "id" : 1,
+      "name" : "Test"
+    },
+    "date" : "01/09/2016",
+    "id" : "000001",
+    "is_active" : 1,
+    "produce" : [ {
+      "category" : "vegetable",
+      "description" : "artichokes globe",
+      "id" : "artgk"
+    } ],
+    "user" : {
+      "id" : 1,
+      "name" : "Test"
+    }
+  }, {
+    "additional_information" : "",
+    "company" : {
+      "id" : 2,
+      "name" : "Test2"
+    },
+    "date" : "01/09/2016",
+    "id" : "000002",
+    "is_active" : 1,
+    "produce" : [ {
+      "category" : "vegetable",
+      "description" : "artichokes globe",
+      "id" : "artgk"
+    } ],
+    "user" : {
+      "id" : 3,
+      "name" : "Test3"
+    }
+  } ],
+  "produce" : [ {
+    "name" : "produce 1",
+    "availability" : "june - dec",
+    "category" : "vegetable",
+    "company_id" : [ {
+      "id" : 1,
+      "name" : "Test"
+    } ],
+    "description" : "artichoke globe",
+    "finish" : "fresh",
+    "frequency" : {
+      "apr" : "0",
+      "aug" : "aug",
+      "dec" : "dec",
+      "feb" : "0",
+      "jan" : "0",
+      "jul" : "jul",
+      "jun" : "jun",
+      "mar" : "0",
+      "may" : "0",
+      "nov" : "nov",
+      "oct" : "oct",
+      "sep" : "sep"
+    },
+    "fresh_colour" : "purple",
+    "inventory_order_code" : "artgk",
+    "per" : 1,
+    "skin_colour" : "green",
+    "sub_category" : "artichokes",
+    "unit" : "kg"
+  }, {
+    "availability" : "june - dec",
+    "category" : "vegetable",
+    "company_id" : [ {
+      "id" : 1,
+      "name" : "Test"
+    } ],
+    "name" : "produce 1",
+    "description" : "artichokes globe",
+    "finish" : "fresh",
+    "frequency" : {
+      "apr" : "0",
+      "aug" : "aug",
+      "dec" : "dec",
+      "feb" : "0",
+      "jan" : "0",
+      "jul" : "jul",
+      "jun" : "jun",
+      "mar" : "0",
+      "may" : "0",
+      "nov" : "nov",
+      "oct" : "oct",
+      "sep" : "sep"
+    },
+    "fresh_colour" : "purple",
+    "inventory_order_code" : "artgc",
+    "per" : 1,
+    "skin_colour" : "green",
+    "sub_category" : "artichokes",
+    "unit" : "cs"
+  }, {
+    "availability" : "june - dec",
+    "category" : "vegetable",
+    "company_id" : [ {
+      "id" : 1,
+      "name" : "Test"
+    } ],
+    "name" : "produce 1",
+    "description" : "artichokes globe",
+    "finish" : "fresh",
+    "frequency" : {
+      "apr" : "0",
+      "aug" : "aug",
+      "dec" : "dec",
+      "feb" : "0",
+      "jan" : "0",
+      "jul" : "jul",
+      "jun" : "jun",
+      "mar" : "0",
+      "may" : "0",
+      "nov" : "nov",
+      "oct" : "oct",
+      "sep" : "sep"
+    },
+    "fresh_colour" : "purple",
+    "inventory_order_code" : "artge",
+    "per" : 1,
+    "skin_colour" : "green",
+    "sub_category" : "artichokes",
+    "unit" : "ea"
+  }, {
+    "availability" : "june - dec",
+    "category" : "vegetable",
+    "company_id" : [ {
+      "id" : 1,
+      "name" : "Test"
+    } ],
+    "name" : "produce 1",
+    "description" : "artichokes globe baby",
+    "finish" : "fresh",
+    "frequency" : {
+      "apr" : "0",
+      "aug" : "aug",
+      "dec" : "dec",
+      "feb" : "0",
+      "jan" : "0",
+      "jul" : "jul",
+      "jun" : "jun",
+      "mar" : "0",
+      "may" : "0",
+      "nov" : "nov",
+      "oct" : "oct",
+      "sep" : "sep"
+    },
+    "fresh_colour" : "purple",
+    "inventory_order_code" : "artgbc",
+    "per" : 1,
+    "skin_colour" : "green",
+    "sub_category" : "artichokes",
+    "unit" : "cs"
+  }, {
+    "availability" : "june - dec",
+    "category" : "vegetable",
+    "company_id" : [ {
+      "id" : 1,
+      "name" : "Test"
+    } ],
+    "name" : "produce 1",
+    "description" : "artichokes globe baby",
+    "finish" : "fresh",
+    "frequency" : {
+      "apr" : "0",
+      "aug" : "aug",
+      "dec" : "dec",
+      "feb" : "0",
+      "jan" : "0",
+      "jul" : "jul",
+      "jun" : "jun",
+      "mar" : "0",
+      "may" : "0",
+      "nov" : "nov",
+      "oct" : "oct",
+      "sep" : "sep"
+    },
+    "fresh_colour" : "purple",
+    "inventory_order_code" : "artgbk",
+    "per" : 1,
+    "skin_colour" : "green",
+    "sub_category" : "artichokes",
+    "unit" : "kg"
+  }, {
+    "availability" : "june - dec",
+    "category" : "vegetable",
+    "company_id" : [ {
+      "id" : 1,
+      "name" : "Test"
+    } ],
+    "name" : "produce 1",
+    "description" : "artichokes globe long stem",
+    "finish" : "fresh",
+    "frequency" : {
+      "apr" : "0",
+      "aug" : "aug",
+      "dec" : "dec",
+      "feb" : "0",
+      "jan" : "0",
+      "jul" : "jul",
+      "jun" : "jun",
+      "mar" : "0",
+      "may" : "0",
+      "nov" : "nov",
+      "oct" : "oct",
+      "sep" : "sep"
+    },
+    "fresh_colour" : "purple",
+    "inventory_order_code" : "artglse",
+    "per" : 1,
+    "skin_colour" : "green",
+    "sub_category" : "artichokes",
+    "unit" : "ea"
+  }, {
+    "availability" : "june - dec",
+    "category" : "vegetable",
+    "company_id" : [ {
+      "id" : 1,
+      "name" : "Test"
+    } ],
+    "name" : "produce 1",
+    "description" : "artichokes jer",
+    "finish" : "fresh",
+    "frequency" : {
+      "apr" : "0",
+      "aug" : "aug",
+      "dec" : "dec",
+      "feb" : "0",
+      "jan" : "0",
+      "jul" : "jul",
+      "jun" : "jun",
+      "mar" : "0",
+      "may" : "0",
+      "nov" : "nov",
+      "oct" : "oct",
+      "sep" : "sep"
+    },
+    "fresh_colour" : 0,
+    "inventory_order_code" : "artjc",
+    "per" : 1,
+    "skin_colour" : "light brown",
+    "sub_category" : "artichokes",
+    "unit" : "cs"
+  } ],
+  "users" : [ {
+    "address" : "123 Test Ave Test Suburb 1234 Test State Test Country",
+    "company" : {
+      "id" : 1,
+      "name" : "Test1"
+    },
+    "email" : "test@test.com",
+    "icon" : "",
+    "id" : 1,
+    "invoice" : [ {
+      "company_name" : "Test",
+      "id" : 1
+    } ],
+    "is_active" : 1,
+    "mobile" : "0412345678",
+    "name" : "Test1",
+    "phone" : "012345678",
+    "user_type" : "admin"
+  }, {
+    "address" : "123 Test Ave Test Suburb 1234 Test State Test Country",
+    "company" : {
+      "id" : 1,
+      "name" : "Test1"
+    },
+    "email" : "test2@test2.com",
+    "icon" : "",
+    "id" : 2,
+    "invoice" : [ {
+      "company_name" : "Test",
+      "id" : 1
+    } ],
+    "is_active" : 1,
+    "mobile" : "0412345678",
+    "name" : "Test2",
+    "phone" : "012345678",
+    "user_type" : "delivery_agent"
+  }, {
+    "address" : "123 Test Ave Test Suburb 1234 Test State Test Country",
+    "company" : {
+      "id" : 2,
+      "name" : "Test2"
+    },
+    "email" : "test3@test3.com",
+    "icon" : "",
+    "id" : 3,
+    "invoice" : [ {
+      "company_name" : "Test",
+      "id" : 1
+    } ],
+    "is_active" : 1,
+    "mobile" : "0412345678",
+    "name" : "Test3",
+    "phone" : "012345678",
+    "user_type" : "client"
+  }, {
+    "address" : "123 Test Ave Test Suburb 1234 Test State Test Country",
+    "company" : {
+      "id" : 2,
+      "name" : "Test2"
+    },
+    "email" : "test4@test4.com",
+    "icon" : "",
+    "id" : 4,
+    "invoice" : [ {
+      "company_name" : "Test",
+      "id" : 1
+    } ],
+    "is_active" : 1,
+    "mobile" : "0412345678",
+    "name" : "Test4",
+    "phone" : "012345678",
+    "user_type" : "employee"
+  }, {
+    "address" : "123 Test Ave Test Suburb 1234 Test State Test Country",
+    "company" : {
+      "id" : 3,
+      "name" : "Test3"
+    },
+    "email" : "test5@test5.com",
+    "icon" : "",
+    "id" : 5,
+    "invoice" : [ {
+      "company_name" : "Test",
+      "id" : 1
+    } ],
+    "is_active" : 0,
+    "mobile" : "0412345678",
+    "name" : "Test5",
+    "phone" : "012345678",
+    "user_type" : "admin"
+  }, {
+    "address" : "123 Test Ave Test Suburb 1234 Test State Test Country",
+    "company" : {
+      "id" : "",
+      "name" : ""
+    },
+    "email" : "aalwishewa@gmail.com",
+    "icon" : "",
+    "id" : 6,
+    "invoice" : [ {
+      "company_name" : "Test",
+      "id" : 1
+    } ],
+    "is_active" : 1,
+    "last_name" : "Super",
+    "mobile" : "0412345678",
+    "name" : "Super",
+    "phone" : "012345678",
+    "user_type" : "super_admin"
+  } ]
+}
